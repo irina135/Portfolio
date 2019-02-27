@@ -6,6 +6,9 @@ html,body {
 img {
     display: inline-block;
 }
+a {
+    transition: 0.5s ease-out;
+}
 /*Grid*/
 .container {
     width: 1140px;
@@ -143,6 +146,7 @@ p.footer-social-icon a:hover {
     border-radius: 50px;
     padding: 8px 23px 8px 23px;
     margin-bottom: 13px;
+    transition: 0.9s ease-out;
 }
 .button:hover {
     color: #061634;
