@@ -2,12 +2,16 @@ html,body {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    min-width: 280px;
 }
 img {
     display: inline-block;
 }
 a {
     transition: 0.5s ease-out;
+}
+* {
+    box-sizing: border-box;
 }
 /*Grid*/
 .container {
@@ -17,8 +21,8 @@ a {
 }
 .row:after {
     clear: both;
-    content: '';
-    display: table-caption;
+    content: "";
+    display: table;
 }
 .col-4 {
     width: 360px;
@@ -37,6 +41,7 @@ a {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    min-height: 400px ;
     color: white;
     text-align: center;
     display: flex;
@@ -80,6 +85,10 @@ a {
 .portfolio-item-img {
     margin-bottom: 17px;
 }
+.portfolio-item-img img {
+    max-width: 100%;
+    height: auto;
+}
 .portfolio-item-tittle {
     font-size: 24px;
     line-height: normal;
@@ -98,10 +107,38 @@ a {
     margin-top: 0;
     margin-bottom: 15px;
 }
+/*page*/
+.portfolio-sigle-big {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.portfolio-sigle-big img {
+    margin-bottom: 50px;
+    max-width: 100%;
+    height: auto;
+}
+.button-back {
+    font-weight: 700;
+    text-decoration: none;
+    color: #0052c2;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    display: inline-block;
+    border: #0052c2  2px solid;
+    border-radius: 50px;
+    padding: 8px 23px 8px 23px;
+    margin-bottom: 13px;
+    transition: 0.9s ease-out;
+}
+.button-back:hover {
+    color: white;
+    background-color: #0052c2;
+}
 /*footer*/
 .footer {
-    clear: both;
-    height: 100px;
+    /*clear: both;
+    height: auto;*/
     background-color: #061634;
     color: #6479a2;
     padding-top: 90px;
@@ -151,5 +188,44 @@ p.footer-social-icon a:hover {
 .button:hover {
     color: #061634;
     background-color: white;
+}
+/*mrdia*/
+@media (max-width: 1160px) {
+    .container {
+        width: 100%;
+    }
+    .col-4 {
+       width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-tittle {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 15px;
+    }
+    .header-slogan {
+        font-size: 22px;
+        line-height: 38px;
+    }
+    .portfolio {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .tittle {
+        font-size: 36px;
+    }
+    .footer {
+        height: auto;
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
 }
 
